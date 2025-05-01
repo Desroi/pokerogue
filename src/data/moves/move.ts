@@ -287,6 +287,7 @@ export default class Move implements Localizable {
       case MoveTarget.USER_SIDE:
       case MoveTarget.ENEMY_SIDE:
       case MoveTarget.BOTH_SIDES:
+      case MoveTarget.SMART:
         return true;
     }
     return false;
@@ -10535,6 +10536,7 @@ export function initMoves() {
       .reflectable(),
     new AttackMove(Moves.DRAGON_DARTS, PokemonType.DRAGON, MoveCategory.PHYSICAL, 50, 100, 10, -1, 0, 8)
       .attr(MultiHitAttr, MultiHitType._2)
+      .target(MoveTarget.SMART)
       .makesContact(false)
       .partial(), // smart targetting is unimplemented
     new StatusMove(Moves.TEATIME, PokemonType.NORMAL, -1, 10, -1, 0, 8)

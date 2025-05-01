@@ -25,5 +25,7 @@ export enum MoveTarget {
   ENEMY_SIDE,
   BOTH_SIDES,
   PARTY,
-  CURSE
+  CURSE,
+  /** {@link https://bulbapedia.bulbagarden.net/wiki/Dragon_Darts_(move) Exclusivly for Dragon Darts} */
+  SMART
 }
